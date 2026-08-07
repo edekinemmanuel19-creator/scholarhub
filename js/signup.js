@@ -186,11 +186,20 @@ signupForms.forEach(form => {
 
         if (password !== confirmPassword) {
 
-            alert("Passwords do not match.");
+    alert("Passwords do not match.");
 
-            return;
+    return;
 
-        }
+}
+
+const button = form.querySelector(".btn-signup");
+
+button.disabled = true;
+
+button.innerHTML =   `
+    <i class="fa-solid fa-spinner fa-spin"></i>
+    Creating Account...
+    `;
 
         
         let users =
@@ -212,22 +221,57 @@ signupForms.forEach(form => {
         const imageInput =
             form.querySelector('input[type="file"]');
 
-        if (imageInput.files.length > 0) {
+      if (imageInput.files.length > 0) {
 
-            const reader = new FileReader();
+    const reader = new FileReader();
 
-            reader.onload = function () {
-                saveUser(reader.result);
+    reader.onload = function () {
 
-            };
+        const img = new Image();
 
-            reader.readAsDataURL(imageInput.files[0]);
+        img.onload = function () {
 
-        } else {
+            const canvas = document.createElement("canvas");
+            const maxSize = 300;
 
-            saveUser("images/default-user.png");
+            let width = img.width;
+            let height = img.height;
 
-        }
+            if (width > height) {
+                if (width > maxSize) {
+                    height *= maxSize / width;
+                    width = maxSize;
+                }
+            } else {
+                if (height > maxSize) {
+                    width *= maxSize / height;
+                    height = maxSize;
+                }
+            }
+
+            canvas.width = width;
+            canvas.height = height;
+
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, width, height);
+
+            const compressedImage = canvas.toDataURL("image/jpeg", 0.6);
+
+            saveUser(compressedImage);
+
+        };
+
+        img.src = reader.result;
+
+    };
+
+    reader.readAsDataURL(imageInput.files[0]);
+
+} else {
+
+    saveUser("images/default-user.png");
+
+}
 
         function saveUser(profileImage) {
 
