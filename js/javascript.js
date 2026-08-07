@@ -744,3 +744,43 @@ window.addEventListener("load", () => {
     console.log("ScholarHub Loaded Successfully.");
 
 });
+
+/*======  HIDE/SHOW NAVBAR ON SCROLL ======*/
+
+(function () {
+
+    const header = document.querySelector("header");
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const threshold = 8;
+
+    function updateHeader() {
+
+        const currentScrollY = window.scrollY;
+        const diff = currentScrollY - lastScrollY;
+
+        if (Math.abs(diff) > threshold) {
+
+            if (diff > 0 && currentScrollY > 150) {
+                header.classList.add("hide-nav");
+                header.classList.remove("show-nav");
+            } else {
+                header.classList.add("show-nav");
+                header.classList.remove("hide-nav");
+            }
+
+            lastScrollY = currentScrollY;
+        }
+
+        ticking = false;
+    }
+
+    window.addEventListener("scroll", () => {
+
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    });
+
+})();

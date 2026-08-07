@@ -365,7 +365,22 @@ header{
 
     z-index:1000;
 
+    transition:transform .35s ease;
+
 }
+
+header.hide-nav{
+
+    transform:translateY(-100%);
+
+}
+
+header.show-nav{
+
+    transform:translateY(0);
+
+}
+
 
 .navbar{
 
