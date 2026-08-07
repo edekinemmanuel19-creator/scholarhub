@@ -1,5 +1,3 @@
-
-
 const tabButtons = document.querySelectorAll(".tab-btn");
 const forms = document.querySelectorAll(".signup-form");
 
@@ -75,51 +73,6 @@ fileInputs.forEach(input => {
             alert("Selected Image: " + this.files[0].name);
 
         }
-
-    });
-
-});
-
-
-
-
-
-forms.forEach(form => {
-
-    form.addEventListener("submit", function(e){
-
-        e.preventDefault();
-
-        const passwords = form.querySelectorAll('input[type="password"]');
-
-        if(passwords.length >=2){
-
-            if(passwords[0].value !== passwords[1].value){
-
-                alert("Passwords do not match.");
-
-                return;
-
-            }
-
-        }
-
-        const button = form.querySelector(".btn-signup");
-
-        button.disabled = true;
-
-        button.innerHTML = `
-        <i class="fa-solid fa-spinner fa-spin"></i>
-        Creating Account...
-        `;
-
-        setTimeout(()=>{
-
-            alert("Account Created Successfully!");
-
-            window.location.href="login.html";
-
-        },1800);
 
     });
 
@@ -264,7 +217,6 @@ signupForms.forEach(form => {
             const reader = new FileReader();
 
             reader.onload = function () {
-
                 saveUser(reader.result);
 
             };
