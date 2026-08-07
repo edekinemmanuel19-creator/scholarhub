@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ScholarHub Dashboard</title>
+
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+            <link rel="icon" href="images/logo.jpg" type="image/png">
+
+    <link rel="stylesheet"
+          href="./css/dashboard.css">
+
+</head>
+
+<body>
+
+<!--=============== SIDEBAR==============-->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+
+        <h2>
+
+            Scholar<span>Hub</span>
+
+        </h2>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li class="active">
+
+                <a href="#">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#profile">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profile
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#features">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    Features
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#partners">
+
+                    <i class="fa-solid fa-user-group"></i>
+
+                    Study Partners
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#notifications">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    Notifications
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</aside>
+
+<!--==================  MAIN CONTENT===============-->
+
+<main class="main-content">
+
+<header class="topbar">
+
+    <button class="menu-btn">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+    <a href="index.html"
+       class="home-btn">
+
+        <i class="fa-solid fa-house"></i>
+
+        Home
+
+    </a>
+
+    <h1>
+
+        ScholarHub Dashboard
+
+    </h1>
+
+</header>
+
+<!--===============WELCOME BANNER===============-->
+
+<section class="welcome-banner">
+
+    <div>
+
+        <h2>
+
+            Welcome back,
+
+            <span id="userName">
+
+                Student
+
+            </span>
+
+            👋
+
+        </h2>
+
+        <p>
+
+            Keep learning.
+
+            Every lesson takes you one step closer to success.
+
+        </p>
+
+    </div>
+
+    <div class="level-box">
+
+        <h3>
+
+            Current Level
+
+        </h3>
+
+        <span id="userLevel">
+
+            Beginner
+
+        </span>
+
+    </div>
+
+</section>
+<!--============== PROFILE SECTION===================-->
+
+<section class="profile-section" id="profile">
+
+    <div class="profile-card">
+
+        <div class="profile-image">
+
+            <img
+                id="profileImage"
+                src="./images/default-user.png"
+                alt="Profile Picture">
+
+        </div>
+
+        <div class="profile-details">
+
+            <h2 id="profileName">
+
+                Emmanuel Daniel
+
+            </h2>
+
+            <div class="user-badges">
+
+                <span
+                    class="badge account-type"
+                    id="accountType">
+
+                    Student
+
+                </span>
+
+                <span
+                    class="badge category"
+                    id="userCategory">
+
+                    JSS
+
+                </span>
+
+            </div>
+
+            <div class="profile-info">
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span id="profileEmail">
+
+                        example@gmail.com
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span id="profilePhone">
+
+                        08012345678
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span id="profileLocation">
+
+                        Lagos, Nigeria
+
+                    </span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-actions">
+
+            <button
+                id="editProfileBtn"
+                class="edit-btn">
+
+                <i class="fa-solid fa-pen"></i>
+
+                Edit Profile
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================  STATISTICS SECTION=================-->
+
+<section class="stats-section">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-star"></i>
+
+        <h3>
+
+            Learning XP
+
+        </h3>
+
+        <h2 id="xpValue">
+
+            0 XP
+
+        </h2>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>
+
+            Progress
+
+        </h3>
+
+        <h2 id="progressText">
+
+            0%
+
+        </h2>
+
+        <div class="progress-bar">
+
+            <div
+                class="progress-fill"
+                id="progressFill">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-fire"></i>
+
+        <h3>
+
+            Study Streak
+
+        </h3>
+
+        <h2 id="streakValue">
+
+            1 Day
+
+        </h2>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-trophy"></i>
+
+        <h3>
+
+            Badges
+
+        </h3>
+
+        <h2 id="badgeValue">
+
+            0 Badges
+
+        </h2>
+
+    </div>
+
+</section>
+<!--=================  LEARNING FEATURES===================-->
+
+<section class="features-section" id="features">
+
+    <div class="section-title">
+
+        <h2>
+
+            Learning Features
+
+        </h2>
+
+        <p>
+
+            Everything you need to succeed in one place.
+
+        </p>
+
+    </div>
+
+    <div class="features-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon ai">
+
+                <i class="fa-solid fa-robot"></i>
+
+            </div>
+
+            <h3>
+
+                AI Study Assistant
+
+            </h3>
+
+            <p>
+
+                Ask questions and receive instant AI explanations anytime.
+
+            </p>
+
+            <button
+                id="openAI"
+                class="feature-btn">
+
+                <i class="fa-solid fa-comments"></i>
+
+                Open AI Assistant
+
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon materials">
+
+                <i class="fa-solid fa-book-open"></i>
+
+            </div>
+
+            <h3>
+
+                Study Materials
+
+            </h3>
+
+            <p>
+
+                Access study resources prepared specifically for your educational category.
+
+            </p>
+
+            <button
+                id="openResources"
+                class="feature-btn">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Open Study Materials
+
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon community">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </div>
+
+            <h3>
+
+                Community Group
+
+            </h3>
+
+            <p>
+
+                Connect with students and tutors in your learning community.
+
+            </p>
+
+            <button
+                id="joinCommunity"
+                class="feature-btn">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Join Community
+
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon partner">
+
+                <i class="fa-solid fa-user-group"></i>
+
+            </div>
+
+            <h3>
+
+                Study Partners
+
+            </h3>
+
+            <p>
+
+                Find classmates studying the same educational category as you.
+
+            </p>
+
+            <button
+                id="findPartners"
+                class="feature-btn">
+
+                <i class="fa-solid fa-users"></i>
+
+                Find Study Partners
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================  NOTIFICATION ==================-->
+
+<section
+    class="notification-section"
+    id="notifications">
+
+    <div class="section-title">
+
+        <h2>
+
+            Notifications
+
+        </h2>
+
+    </div>
+
+    <div
+        id="notificationBox"
+        class="notification-box">
+
+        <p>
+
+            No new notifications.
+
+        </p>
+
+    </div>
+
+</section>
+<!--===== EDIT PROFILE====-->
+
+<div class="modal" id="editProfileModal">
+
+    <div class="modal-content">
+
+        <span class="close-modal"
+              id="closeEditModal">
+
+            &times;
+
+        </span>
+
+        <h2>
+
+            Edit Profile
+
+        </h2>
+
+        <form id="editProfileForm">
+
+            <div class="input-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="editName">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Phone Number</label>
+
+                <input
+                    type="tel"
+                    id="editPhone">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Location</label>
+
+                <input
+                    type="text"
+                    id="editLocation">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Change Profile Picture</label>
+
+                <input
+                    type="file"
+                    id="editImage"
+                    accept="image/*">
+
+            </div>
+
+            <button
+                class="save-btn"
+                type="submit">
+
+                Save Changes
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!--============STUDY PARTNERS =================-->
+
+<div class="modal"
+     id="partnersModal">
+
+    <div class="modal-content">
+
+        <span
+            class="close-modal"
+            id="closePartners">
+
+            &times;
+
+        </span>
+
+        <h2>
+
+            Study Partners
+
+        </h2>
+
+        <div
+            id="partnersContainer">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--============NOTIFICATION===============-->
+
+<div
+    id="toastNotification"
+    class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastText">
+
+        Notification
+
+    </span>
+
+</div>
+
+<!--=======MOBILE SIDEBAR====-->
+
+<div
+    class="sidebar-overlay">
+
+</div>
+
+
+<footer>
+
+    <p>
+
+        © 2026 ScholarHub.
+
+        Empowering learners through technology.
+
+    </p>
+
+</footer>
+
+</main>
+
+
+
+<script src="./js/dashboard.js"></script>
+
+<!--=====AI ASSISTANT SCRIPT-->
+
+<script type="text/javascript">
+
+var Tawk_API = Tawk_API || {},
+
+Tawk_LoadStart = new Date();
+
+(function(){
+
+var s1=document.createElement("script"),
+
+s0=document.getElementsByTagName("script")[0];
+
+s1.async=true;
+
+s1.src='https://embed.tawk.to/690232fbe48b521951f26d35/1j8o9eaf5';
+
+s1.charset='UTF-8';
+
+s1.setAttribute('crossorigin','*');
+
+s0.parentNode.insertBefore(s1,s0);
+
+})();
+
+</script>
+
+</body>
+
+</html>

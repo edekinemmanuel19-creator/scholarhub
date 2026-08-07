@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ScholarHub | Create Account</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+      <link rel="icon" href="images/logo.jpg" type="image/png">
+
+    <link rel="stylesheet"
+          href="css/signup.css">
+
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <img src="images/background.jpg"
+         class="hero-image"
+         alt="ScholarHub Background">
+
+
+    <a href="index.html"
+       class="home-btn">
+
+        <i class="fa-solid fa-house"></i>
+
+        Home
+
+    </a>
+
+    <div class="logo-area">
+        <h2>
+
+            Scholar<span>Hub</span>
+
+        </h2>
+
+    </div>
+
+
+    <div class="signup-container">
+
+        <div class="signup-card">
+
+            <h1>Create Account</h1>
+
+            <p>
+
+                Join ScholarHub and begin your learning journey.
+
+            </p>
+
+
+
+            <div class="account-tabs">
+
+                <button
+                    class="tab-btn active"
+                    data-target="student">
+
+                    Student
+
+                </button>
+
+                <button
+                    class="tab-btn"
+                    data-target="tutor">
+
+                    Tutor
+
+                </button>
+
+            </div>
+
+            <!--=============STUDENT FORM=============-->
+
+            <form
+                id="studentForm"
+                class="signup-form active">
+
+                <div class="input-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Date of Birth</label>
+
+                    <input
+                        type="date"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Gender</label>
+
+                    <select required>
+
+                        <option value="">Select Gender</option>
+
+                        <option>Male</option>
+
+                        <option>Female</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Educational Category</label>
+
+                    <select required>
+
+                        <option value="">Choose Category</option>
+
+                        <option>JSS</option>
+
+                        <option>SSS Arts</option>
+
+                        <option>SSS Science</option>
+
+                        <option>SSS Commercial</option>
+
+                        <option>University</option>
+
+                        <option>English Learner</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Location</label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your city/state"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Profile Picture</label>
+
+                    <input
+                        type="file"
+                        accept="image/*">
+
+                </div>
+
+                <div class="input-group password-group">
+
+                    <label>Password</label>
+
+                    <div class="password-box">
+
+                        <input
+                            id="studentPassword"
+                            type="password"
+                            placeholder="Create Password"
+                            required>
+
+                        <i class="fa-solid fa-eye toggle-password"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="input-group password-group">
+
+                    <label>Confirm Password</label>
+
+                    <div class="password-box">
+
+                        <input
+                            id="studentConfirmPassword"
+                            type="password"
+                            placeholder="Confirm Password"
+                            required>
+
+                        <i class="fa-solid fa-eye toggle-password"></i>
+
+                    </div>
+
+                </div>
+
+    
+
+                <div class="options">
+
+<label class="remember">
+    <input type="checkbox" required>
+    I agree to the
+    <a href="terms-of-service.html" class="terms-link" target="_blank">
+        Terms & Conditions
+    </a>
+</label>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-signup">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Create Student Account
+
+                </button>
+
+            </form>
+
+
+
+            <!--===================TUTOR FORM=================-->
+
+            <form
+                id="tutorForm"
+                class="signup-form">
+
+                <div class="input-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Location</label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your location"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Area of Specialization</label>
+
+                    <select required>
+
+                        <option value="">Select Specialization</option>
+
+                        <option>JSS Subjects</option>
+
+                        <option>SSS Science</option>
+
+                        <option>SSS Arts</option>
+
+                        <option>SSS Commercial</option>
+
+                        <option>University Courses</option>
+
+                        <option>English Language</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Profile Picture</label>
+
+                    <input
+                        type="file"
+                        accept="image/*">
+
+                </div>
+
+                <div class="input-group password-group">
+
+                    <label>Password</label>
+
+                    <div class="password-box">
+
+                        <input
+                            id="tutorPassword"
+                            type="password"
+                            placeholder="Create Password"
+                            required>
+
+                        <i class="fa-solid fa-eye toggle-password"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="input-group password-group">
+
+                    <label>Confirm Password</label>
+
+                    <div class="password-box">
+
+                        <input
+                            id="tutorConfirmPassword"
+                            type="password"
+                            placeholder="Confirm Password"
+                            required>
+
+                        <i class="fa-solid fa-eye toggle-password"></i>
+
+                    </div>
+
+                </div>
+
+<div class="options">
+
+    <label class="remember">
+    <input type="checkbox" required>
+    I agree to the
+    <a href="terms-of-service.html" class="terms-link" target="_blank">
+        Terms & Conditions
+    </a>
+</label>
+
+</div>
+
+                <button
+                    type="submit"
+                    class="btn-signup">
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                    Create Tutor Account
+
+                </button>
+
+            </form>
+
+            <div class="login-link">
+
+                Already have an account?
+
+                <a href="login.html">
+
+                    Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/signup.js"></script>
+
+</body>
+
+</html>
